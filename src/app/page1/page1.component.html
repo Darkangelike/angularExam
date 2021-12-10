@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let stat of tabStats">
+    <app-display-stat [aStat]="stat"></app-display-stat>
+    <button (click)="clickEvent(stat)">X</button>
+  </li>
+</ul>

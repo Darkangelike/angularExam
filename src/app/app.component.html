@@ -1,6 +1,10 @@
-<ul>
-  <li *ngFor="let stat of tabStats">
-    <app-display-stat [aStat]="stat"></app-display-stat
-    ><button (click)="clickEvent(stat)">X</button>
-  </li>
-</ul>
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/page1" routerLinkActive="Active">Stat list</a></li>
+      <li><a routerLink="/page2" routerLinkActive="Active">Add a stat</a></li>
+    </ul>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
