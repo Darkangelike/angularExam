@@ -13,4 +13,11 @@ export class AppComponent {
   constructor(public singletonStat: StatService) {
     this.tabStats = this.singletonStat.tabStats;
   }
+
+  clickEvent(stat: Statistique) {
+    let index = this.tabStats.indexOf(stat);
+    if (index != -1) {
+      this.tabStats.splice(index, 1);
+    }
+  }
 }
