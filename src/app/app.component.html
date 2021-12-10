@@ -1,4 +1,5 @@
 <ul>
-  <li>{{ stat1.title }} <app-display-stat></app-display-stat></li>
-  <li>{{ stat2.title }} <app-display-stat></app-display-stat></li>
+  <li *ngFor="let stat of tabStats">
+    <app-display-stat [aStat]="stat"></app-display-stat>
+  </li>
 </ul>
