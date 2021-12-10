@@ -1,1 +1,25 @@
-<p>page2 works!</p>
+<h1>Add a stat to the list</h1>
+
+<form (submit)="checkForm()">
+  <label for="id">ID</label>
+  <input type="text" name="id" id="id" value="lmno" [(ngModel)]="id" required />
+  <label for="title">Title</label>
+  <input
+    type="text"
+    name="title"
+    id="title"
+    value="Chances I will fail"
+    [(ngModel)]="title"
+    required
+  />
+  <label for="value">Value</label>
+  <input
+    type="text"
+    name="value"
+    id="value"
+    value="Very likely"
+    [(ngModel)]="value"
+    required
+  />
+  <input type="submit" value="Add Stat" />
+</form>
