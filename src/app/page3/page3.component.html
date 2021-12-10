@@ -1,0 +1,20 @@
+<h1>Nico Nico's Stats</h1>
+
+<input type="button" (click)="sendRequest()" value="See the list" />
+
+<div *ngIf="requestSuccess">
+  <p>
+    Il y a
+    {{ nicoStats.length }}
+    éléments dans le tableau de Nico Nico.<br />
+  </p>
+  <ul>
+    <li *ngFor="let stat of nicoStats; let i = index">
+      n°{{ i }} <br /><strong>{{ stat.title }}</strong> <br />
+      {{ stat.value }}<br /><br />
+    </li>
+  </ul>
+
+  <!-- <label>Ajouter un élément:</label>
+<input type="text" /> -->
+</div>
